@@ -96,7 +96,7 @@ public class LocationUpdatesService extends Service {
 
         startLocationUpdates();
 
-        return START_NOT_STICKY;
+        return START_STICKY;
     }
 
     @Nullable
