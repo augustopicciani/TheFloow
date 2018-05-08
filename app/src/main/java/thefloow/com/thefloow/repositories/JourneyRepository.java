@@ -18,7 +18,7 @@ import thefloow.com.thefloow.model.local.JourneyModel;
 public class JourneyRepository {
 
     private JourneyDao journeyDao = DatabaseProvider.getInstance().journeyDao();
-    private PublishSubject<Boolean> isTracking = PublishSubject.create();
+   // private PublishSubject<Boolean> isTracking = PublishSubject.create();
     private static JourneyRepository INSTANCE;
 
     public synchronized static JourneyRepository getInstance() {
@@ -41,16 +41,16 @@ public class JourneyRepository {
         return journeyDao.getJourneyById(journeyID);
     }
 
-    /**
-     * I know it's not the best practice to keep variable state and there are many other solutions
-     * but I have no time and I am in hurry :)
-     * @return
-     */
-    public PublishSubject<Boolean> isTracking(){
-        return isTracking;
-    }
+//    /**
+//     * I know it's not the best practice to keep variable state and there are many other solutions
+//     * but I have no time and I am in hurry :)
+//     * @return
+//     */
+//    public PublishSubject<Boolean> isTracking(){
+//        return isTracking;
+//    }
 
-    public void setIsTracking(boolean flag){
-        isTracking.onNext(flag);
-    }
+//    public void setIsTracking(boolean flag){
+//        isTracking.onNext(flag);
+//    }
 }

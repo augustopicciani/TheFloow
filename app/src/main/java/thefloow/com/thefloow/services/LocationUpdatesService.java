@@ -172,7 +172,7 @@ public class LocationUpdatesService extends Service {
 
     public void trackingToggle(){
         this.isTracking = isTracking ? false : true;
-        JourneyRepository.getInstance().setIsTracking(this.isTracking);
+       // JourneyRepository.getInstance().setIsTracking(this.isTracking);
         setNotification();
         if(isTracking){
             setStartDate(Calendar.getInstance().getTime());

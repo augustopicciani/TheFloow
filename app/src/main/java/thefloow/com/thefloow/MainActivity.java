@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     private List<JourneyModel> selectedJourneyPoints;
     private int currentZoom = 15;
     private boolean shouldShowCurrentLocation = true;
-    private boolean shouldGoInBackground = false;
+    //private boolean shouldGoInBackground = false;
 
 
     @Override
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
         initPermissions();
-        shouldGoInBackground = false;
+       //shouldGoInBackground = false;
 
     }
 
@@ -113,11 +113,14 @@ public class MainActivity extends AppCompatActivity {
                     mService.trackingToggle();
                 }
 
-                shouldGoInBackground = true;
+               // shouldGoInBackground = true;
 
             }
         });
 
+        /**
+         * Button for list journeys saved
+         */
         btnListJourney.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -188,22 +191,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        viewModel.getIsTracking().observe(this, new Observer<Boolean>() {
-            @Override
-            public void onChanged(@Nullable Boolean isTracking) {
-                /*
-                IF RECORDING APP SHOULD FINISH
-                 */
-                if(isTracking && shouldGoInBackground){
-                    finish();
-                }
-            }
-        });
+//        viewModel.getIsTracking().observe(this, new Observer<Boolean>() {
+//            @Override
+//            public void onChanged(@Nullable Boolean isTracking) {
+//                /*
+//                IF RECORDING APP SHOULD FINISH
+//                 */
+//                if(isTracking && shouldGoInBackground){
+//                    finish();
+//                }
+//            }
+//        });
 
 
         viewModel.getCurrentLocation();
         viewModel.getPointsForLine();
-        viewModel.doGetIsTracking();
+        //viewModel.doGetIsTracking();
     }
 
 

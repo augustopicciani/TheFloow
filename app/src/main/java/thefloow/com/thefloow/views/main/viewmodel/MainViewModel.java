@@ -96,18 +96,18 @@ public class MainViewModel extends ViewModel {
                 }));
     }
 
-    public void doGetIsTracking(){
-
-       compositeDisposable.add(JourneyRepository.getInstance().isTracking()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<Boolean>() {
-                    @Override
-                    public void accept(Boolean aBoolean) throws Exception {
-                        isTracking.setValue(aBoolean);
-                    }
-                }));
-    }
+//    public void doGetIsTracking(){
+//
+//       compositeDisposable.add(JourneyRepository.getInstance().isTracking()
+//                .subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Consumer<Boolean>() {
+//                    @Override
+//                    public void accept(Boolean aBoolean) throws Exception {
+//                        isTracking.setValue(aBoolean);
+//                    }
+//                }));
+//    }
 
 
     @Override
