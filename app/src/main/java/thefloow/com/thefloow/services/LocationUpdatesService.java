@@ -14,6 +14,7 @@ import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -160,6 +161,8 @@ public class LocationUpdatesService extends Service {
                 new SaveJourneyAsyncTask().execute(journeyModel);
             }
         }
+        Toast.makeText(LocationUpdatesService.this, "Journey saved", Toast.LENGTH_SHORT).show();
+
     }
 
     private void setStartDate(Date value){
