@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TheFloow</string>
+    <string name="service_notification_title">Tracking position</string>
+    <string name="service_notification_info">Info</string>
+    <string name="service_tracking_on">Tracking is on</string>
+    <string name="service_tracking_off">Tracking is off</string>
+    <string name="journey_title">Your Journeys</string>
+</resources>
